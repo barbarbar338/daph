@@ -1,0 +1,48 @@
+{
+    "author": {
+        "email": "demirci.baris38@gmail.com",
+        "name": "Barış DEMİRCİ",
+        "url": "https://bariscodes.me/"
+    },
+    "license": "GPL-3.0",
+    "main": "dist",
+    "name": "daph",
+    "version": "1.0.0",
+    "description": "✨ A simple CLI commander system",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/barbarbar338/daph"
+    },
+    "keywords": [
+        "cli",
+        "commander",
+        "cli-commander",
+        "command-line-interface",
+        "command-line",
+        "args",
+        "arg",
+        "argument",
+        "parser",
+        "parse",
+        "argv",
+        "parsing",
+        "argument-parser",
+        "arguments",
+        "argv-parser"
+    ],
+    "scripts": {
+        "prebuild": "rimraf dist",
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "@types/colors": "^1.2.1",
+        "@types/node": "^14.0.27",
+        "rimraf": "^3.0.2",
+        "ts-node": "^9.0.0",
+        "typescript": "^3.9.7"
+    },
+    "dependencies": {
+        "bargs": "^1.0.1",
+        "colors": "^1.4.0"
+    }
+}
