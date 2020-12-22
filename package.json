@@ -7,7 +7,7 @@
     "license": "GPL-3.0",
     "main": "dist",
     "name": "daph",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "✨ A simple CLI commander system",
     "repository": {
         "type": "git",
