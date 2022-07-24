@@ -27,10 +27,7 @@ export interface HelpCategory {
     [key: string]: ICommand[];
 }
 
-export type DaphFunction = (
-    command: string,
-    args: UnknownObject,
-) => unknown;
+export type DaphFunction = (command: string, args: UnknownObject) => unknown;
 
 export type ArgDefinition = {
     name: string;
@@ -81,7 +78,8 @@ class Daph {
         if (args.help || args._unknown.help || args.h || args._unknown.h)
             return this.handleHelp(command);
         for (const definition of command.argDefinitions) {
-            if (!definition.isOptional && !args[definition.name]) return this.handleHelp(command);
+            if (!definition.isOptional && !args[definition.name])
+                return this.handleHelp(command);
             outputArgs[definition.name] = args[definition.name];
         }
         fn(command.name, outputArgs);

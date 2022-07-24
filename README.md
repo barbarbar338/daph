@@ -1,24 +1,32 @@
 # 🦄 Daph
-- A simple CLI commander system ✨
+
+-   A simple CLI commander system ✨
 
 # 📥 Installation
+
 Using yarn:
+
 ```
 $ yarn add daph
 ```
+
 Using npm:
+
 ```
 $ npm install daph
 ```
 
 # 🔧 Usage
+
 ```ts
 daph
     .createCommand(ICommand, callback(commandName, args) => unknown) // create command
     .createCommand(ICommand, callback(commandName, args) => unknown) // create another command
     .help() // If none of the above commands are used, execute the help command.
 ```
-- `ICommand`: Where command is defined to be used when separating arguments. Structure:
+
+-   `ICommand`: Where command is defined to be used when separating arguments. Structure:
+
 ```js
 {
     name: "test", // Command name
@@ -32,7 +40,9 @@ daph
     ] // Arg definition array (Learn about ArgDefinition below)
 }
 ```
-- `ArgDefinition`: Where options are defined to be used when separating arguments. Structure:
+
+-   `ArgDefinition`: Where options are defined to be used when separating arguments. Structure:
+
 ```js
 {
     name: "message", // Option name
@@ -42,15 +52,17 @@ daph
     isOptional?: false // optional
 }
 ```
-- `callback(commandName, args) => unknown`: If the command you set is used, the action to be applied. Example:
+
+-   `callback(commandName, args) => unknown`: If the command you set is used, the action to be applied. Example:
+
 ```js
-daph //         callback(commandName, args) ⬇️
-    .createCommand(ICommand, (commandName, args) => {
-        console.log("You used", commandName, "command with arguments", args);
-    });
+daph.createCommand(ICommand, (commandName, args) => { //         callback(commandName, args) ⬇️
+    console.log("You used", commandName, "command with arguments", args);
+});
 ```
 
 # 🛠️ Example
+
 ```js
 import daph from "daph";
 
@@ -74,4 +86,5 @@ daph
 ```
 
 # 🔗 Contributing / Issues / Ideas
+
 Feel free to use GitHub's features ✨
